@@ -1,0 +1,5 @@
+<%= form_tag "weather/search", method: :get do %>
+  <%= label_tag :zipcode, "What's your zip code?" %>
+  <%= text_field_tag :zipcode %>
+  <%= submit_tag "Is it going to rain?" %>
+<% end %>
