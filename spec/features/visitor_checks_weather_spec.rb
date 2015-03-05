@@ -15,6 +15,15 @@ feature "Visitor checks the weather" do
   end
 
   scenario "raining" do
+    #setup
+    visit root_path
 
+    #exercise
+    fill_in "What's your zip code?", with: "94114"
+    click_button "Is it going to rain?"
+
+    #verify
+    expect(page).to have_content("Rain rain go away!")
+    expect(page).to have_content("Bring the umbrella!")
   end
 end

@@ -5,7 +5,9 @@ class WeatherController < ApplicationController
   end
 
   def search
-
+    cookies[:zipcode] = params[:zipcode]
+    @zipcode = params[:zipcode]
+    render :sunny
   end
 
 end
